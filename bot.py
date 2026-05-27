@@ -188,7 +188,7 @@ async def cmd_start(message: Message, state: FSMContext):
     vip_status_text = "⭐ Активен" if is_vip else "❌ Не куплен"
     
     welcome_text = (
-        "👋 Добро пожаловать в бота Cycles work!\n\n"
+        "👋 Добро пожаловать в бота Max work!\n\n"
         f"  Статус работы: {current_status}\n"
         f"  Актуальный прайс: {price_val}$\n"
         f"  Актуальная очередь: {current_queue}\n"
@@ -204,7 +204,7 @@ async def process_profile(message: Message):
     vip_text = "💎 PREMIUM VIP" if is_vip else "Обычный пользователь"
     
     profile_text = (
-        "👤 **Ваш профиль в Cycles work**\n\n"
+        "👤 **Ваш профиль в Max work**\n\n"
         f"🆔 Ваш ID: `{message.from_user.id}`\n"
         f"Статус: `{vip_text}`\n\n"
         f"💰 **Ваш баланс:** `{balance}$`\n\n"
@@ -254,7 +254,7 @@ async def process_global_stats(message: Message):
     conn.close()
     
     await message.answer(
-        "📊 **Глобальная статистика Cycles work**\n\n"
+        "📊 **Глобальная статистика Max work**\n\n"
         f"👥 Всего вовлечено воркеров: {total_users}\n"
         f"✅ Суммарно успешно принято аккаунтов: {total_approved}"
     )
@@ -294,7 +294,7 @@ async def process_archive(message: Message):
 @dp.message(F.text == "ℹ️ Инструкция")
 async def process_instruction(message: Message):
     ins_text = (
-        "ℹ️ **Инструкция по работе с Cycles work**\n\n"
+        "ℹ️ **Инструкция по работе с Max work**\n\n"
         "1️⃣ Нажмите кнопку **'💻 Сдать аккаунт'**.\n"
         "2️⃣ Введите номер телефона в международном формате РФ (**начинающийся строго на +7**).\n"
         "3️⃣ Ожидайте, пока администратор проверит первичные данные аккаунта.\n"
